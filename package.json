@@ -1,0 +1,19 @@
+{
+  "name": "tetorica-vsu-synth-tauri",
+  "version": "0.1.0",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "dev": "tauri dev --no-dev-server",
+    "build": "tauri build",
+    "tauri": "tauri",
+    "icons": "node scripts/generate-icons.mjs",
+    "import:release": "node scripts/import-release.cjs",
+    "check:release": "node scripts/import-release.cjs --check",
+    "record:edits": "node scripts/import-release.cjs --record-local-changes",
+    "test": "npm run check:release && node --test tests/desktop-interface.test.cjs"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.11.5"
+  }
+}

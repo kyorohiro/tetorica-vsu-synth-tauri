@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Tetorica VSU Synth",
+  "version": "0.1.0",
+  "identifier": "net.tetorica.vsu-synth",
+  "build": {
+    "frontendDist": "../dist",
+    "beforeDevCommand": "npm run check:release",
+    "beforeBuildCommand": "npm run check:release"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "label": "main",
+        "title": "Tetorica VSU Synth",
+        "url": "synth-vsu/index.html",
+        "width": 1280,
+        "height": 900,
+        "dragDropEnabled": false,
+        "backgroundThrottling": "disabled"
+      }
+    ],
+    "security": {
+      "csp": null,
+      "capabilities": []
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "app"
+    ],
+    "category": "Music",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
